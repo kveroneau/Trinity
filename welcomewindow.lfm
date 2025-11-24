@@ -1,0 +1,127 @@
+object WelcomeForm: TWelcomeForm
+  Left = 358
+  Height = 352
+  Top = 179
+  Width = 410
+  BorderStyle = bsDialog
+  Caption = 'Welcome to Trinity!'
+  ClientHeight = 352
+  ClientWidth = 410
+  LCLVersion = '4.0.0.4'
+  OnShow = FormShow
+  object Label1: TLabel
+    Left = 8
+    Height = 34
+    Top = 8
+    Width = 218
+    Caption = 'Say Hello to Trinity!'
+    Font.Height = -24
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 21
+    Top = 48
+    Width = 255
+    Caption = 'Post-Modern Password Management'
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 21
+    Top = 72
+    Width = 380
+    Caption = 'The only zero storage password management solution.'
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 21
+    Top = 96
+    Width = 321
+    Caption = 'Can be used in completely offline and isolated.'
+  end
+  object Label5: TLabel
+    Left = 8
+    Height = 21
+    Top = 120
+    Width = 355
+    Caption = 'Never connects to any remote servers, 100% offline.'
+  end
+  object Label6: TLabel
+    Left = 8
+    Height = 21
+    Top = 144
+    Width = 154
+    Caption = 'Extremely easy to use.'
+  end
+  object Label7: TLabel
+    Left = 8
+    Height = 21
+    Top = 200
+    Width = 257
+    Caption = 'Trinity Identification Number(TIN):'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object TIN: TEdit
+    Left = 272
+    Height = 29
+    Top = 192
+    Width = 136
+    EchoMode = emPassword
+    NumbersOnly = True
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+  object Label8: TLabel
+    Left = 8
+    Height = 21
+    Top = 232
+    Width = 260
+    Caption = 'Personal Identification Phrase(PIP):'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Passphrase: TEdit
+    Left = 8
+    Height = 29
+    Top = 264
+    Width = 400
+    EchoMode = emPassword
+    PasswordChar = '!'
+    TabOrder = 1
+  end
+  object SeePhrase: TCheckBox
+    Left = 282
+    Height = 25
+    Top = 228
+    Width = 126
+    Caption = 'See my Phrase'
+    TabOrder = 2
+    OnClick = SeePhraseClick
+  end
+  object BeginBtn: TButton
+    Left = 112
+    Height = 33
+    Top = 304
+    Width = 176
+    Caption = 'Let''s Begin...'
+    TabOrder = 3
+    OnClick = BeginBtnClick
+  end
+  object Label9: TLabel
+    Left = 8
+    Height = 21
+    Top = 168
+    Width = 377
+    Caption = 'For zero storage, you need to remember only 3 things.'
+  end
+  object Version: TLabel
+    Left = 358
+    Height = 352
+    Top = 0
+    Width = 52
+    Align = alRight
+    Caption = 'Version'
+  end
+end

@@ -1,0 +1,106 @@
+object TrinityForm: TTrinityForm
+  Left = 307
+  Height = 305
+  Top = 139
+  Width = 704
+  Caption = 'Trinity Password Manager'
+  ClientHeight = 305
+  ClientWidth = 704
+  Menu = MainMenu
+  LCLVersion = '4.0.0.4'
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  object PairSplitter: TPairSplitter
+    Left = 0
+    Height = 304
+    Top = 0
+    Width = 665
+    Position = 170
+    object LeftPane: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 304
+      Top = 0
+      Width = 170
+      ClientWidth = 170
+      ClientHeight = 304
+      OnResize = LeftPaneResize
+      object PasswordList: TListBox
+        Left = 0
+        Height = 305
+        Top = 0
+        Width = 168
+        ItemHeight = 0
+        TabOrder = 0
+        TopIndex = -1
+        OnDblClick = PasswordListDblClick
+      end
+    end
+    object RightPane: TPairSplitterSide
+      Cursor = crArrow
+      Left = 175
+      Height = 304
+      Top = 0
+      Width = 490
+      ClientWidth = 490
+      ClientHeight = 304
+      OnResize = RightPaneResize
+      object Password: TMemo
+        Left = 0
+        Height = 248
+        Top = 0
+        Width = 424
+        Lines.Strings = (
+          'Password'
+        )
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        Visible = False
+      end
+    end
+  end
+  object MainMenu: TMainMenu
+    Left = 464
+    Top = 192
+    object FileMenu: TMenuItem
+      Caption = '&File'
+      object NewPassMenu: TMenuItem
+        Caption = 'New Password...'
+        OnClick = NewPassMenuClick
+      end
+      object DelPassMenu: TMenuItem
+        Caption = '&Delete Password...'
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object NoStoreMenu: TMenuItem
+        Caption = '&No Storage Password...'
+        OnClick = NoStoreMenuClick
+      end
+      object Separator2: TMenuItem
+        Caption = '-'
+      end
+      object ExitMenu: TMenuItem
+        Caption = 'Exit'
+      end
+    end
+    object PasswordMenu: TMenuItem
+      Caption = '&Password'
+      object ShowContentMenu: TMenuItem
+        AutoCheck = True
+        Caption = 'Show Content'
+        OnClick = ShowContentMenuClick
+      end
+      object CopyMenu: TMenuItem
+        Caption = '&Copy Password'
+        OnClick = CopyMenuClick
+      end
+      object DoubleMenu: TMenuItem
+        AutoCheck = True
+        Caption = '&Double-click copies'
+      end
+    end
+  end
+end
